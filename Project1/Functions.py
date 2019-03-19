@@ -29,15 +29,22 @@ def apply_boundary_conditions(x, L):
             x[d] = x[d] - L
     return x
 
-def get_r(state, t, particle):
+def get_r(state, t, particle, L):
     '''Determine the closest particle for a given particle at a given time (t) and
        return the distance between these two particles'''
     xi = state[particle, t, :3]
     xj = np.delete(state[:, t, :3], particle, axis=0) # exclude the particle itself
-    #closest_part = (norm((xi - xj + L/2) % L - L/2, axis = 1)).argmin()
-    closest_part = (norm(xi - xj, axis = 1)).argmin()
-    closest_part_pos = xj[closest_part]
-    return xi - closest_part_pos
+    closest_part = (norm((xi - xj + L/2) % L - L/2, axis = 1)).argmin()
+    return xi - xj[closest_part]
+
+def create_random_vector():
+    '''Calculate a unitary vector in random direction'''
+    vec = np.asarray([np.random.uniform(), np.random.uniform(), np.random.uniform()])
+    return vec / norm(vec)
+
+def rescale_velocities(state, t):
+    lambda_factor = np.sqrt((num_part - 1) * 3 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
+    state[:, t, 3:] *= lambda_factor
 
 # Kinematics & mechanics
 def dUdr(r):
@@ -98,3 +105,12 @@ def pair_correlation(n, r, Deltar, L, N):
     mean_n = np.mean(n)
     g = (2*V)/(N*(N-1)) * mean_n/(4*np.pi * r**2. * Deltar)
     return g
+
+def create_random_vector():
+    '''Calculate a unitary vector in random direction'''
+    vec = np.asarray([np.random.uniform(), np.random.uniform(), np.random.uniform()])
+    return vec / norm(vec)
+
+def rescale_velocities(state, t, num_part, T):
+    lambda_factor = np.sqrt((num_part - 1) * 3 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
+    state[:, t, 3:] *= lambda_factor
