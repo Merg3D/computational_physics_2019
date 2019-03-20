@@ -12,11 +12,7 @@ def norm(r, axis=0):
 
 def dist(i, j):
     '''Distance (magnitude) between particles i and j'''
-    x = j[0]- i[0]
-    y = j[1] - i[1]
-    z = j[2] - i[2]
-    distance = np.sqrt(x**2. + y**2. + z**2.)
-    return distance
+    return norm(i - j)
 
 # Simulation related
 def apply_boundary_conditions(x, L):
@@ -32,10 +28,22 @@ def apply_boundary_conditions(x, L):
 def get_r(state, t, particle, L):
     '''Determine the closest particle for a given particle at a given time (t) and
        return the distance between these two particles'''
-    xi = state[particle, t, :3]
-    xj = np.delete(state[:, t, :3], particle, axis=0) # exclude the particle itself
-    closest_part = (norm((xi - xj + L/2) % L - L/2, axis = 1)).argmin()
-    return xi - xj[closest_part]
+    reference = state[particle, t, :3]
+    neighhbours = np.delete(state[:, t, :3], particle, axis=0) # exclude the particle itself
+    r = np.zeros(3)
+    
+    # find for each particle the closest mirror
+    for n in neighhbours:
+        closest_mirror = np.zeros(3)
+        
+        for d in range(3):
+            xi = reference[d]
+            xj = np.linspace(n[d]-L, n[d]+L, 3)
+            closest_mirror[d] = np.min((xi - xj + L/2) % L - L/2)
+        
+        r += reference - closest_mirror
+    
+    return r
 
 def create_random_vector():
     '''Calculate a unitary vector in random direction'''
