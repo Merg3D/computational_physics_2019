@@ -53,6 +53,7 @@ def create_random_vector():
 def rescale_velocities(state, t):
     lambda_factor = np.sqrt((num_part - 1) * 3 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
     state[:, t, 3:] *= lambda_factor
+    return state
 
 # Kinematics & mechanics
 def dUdr(r):
@@ -104,14 +105,14 @@ def LJP(r):
     return 4.*(1./(r**12.) - 1./(r**6))
 
 # Observables
-def pair_correlation(n, r, Deltar, L, N):
+def pair_correlation(n, r, dr, L, N):
     '''Pair correlation function for particle n
-    at distance r (array), bin size Deltar,
+    at distance r (array), bin size dr,
     in simulation box of size L,
     and total number of particles N'''
     V = L**3.
     mean_n = np.mean(n)
-    g = (2*V)/(N*(N-1)) * mean_n/(4*np.pi * r**2. * Deltar)
+    g = (2*V)/(N*(N-1)) * mean_n/(4*np.pi * r**2. * dr)
     return g
 
 def create_random_vector():
