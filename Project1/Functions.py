@@ -25,23 +25,22 @@ def apply_boundary_conditions(x, L):
             x[d] = x[d] - L
     return x
 
-def get_r(state, t, particle, L):
+def get_force(state, t, particle, L):
     '''Determine the closest particle for a given particle at a given time (t) and
        return the distance between these two particles'''
     reference = state[particle, t, :3]
-    neighhbours = np.delete(state[:, t, :3], particle, axis=0) # exclude the particle itself
+    indices = np.arange(0, state.shape[0])
+    indices = np.delete(indices, particle)
+    neighhbours = state[indices, t, :3] # exclude the particle itself
     r = np.zeros(3)
     
     # find for each particle the closest mirror
-    for n in neighhbours:
-        closest_mirror = np.zeros(3)
+    for n in neighhbours:     
+        xi = reference
+        xj = n
+        closest_distance = (xi - xj + L/2) % L - L/2
         
-        for d in range(3):
-            xi = reference[d]
-            xj = np.linspace(n[d]-L, n[d]+L, 3)
-            closest_mirror[d] = np.min((xi - xj + L/2) % L - L/2)
-        
-        r += reference - closest_mirror
+        r += closest_distance
     
     return r
 
