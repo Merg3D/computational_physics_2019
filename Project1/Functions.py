@@ -2,55 +2,58 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from astropy import constants as const
-from astropy import units as u
 
 # Basic functions
 def norm(r, axis=0):
     '''Calculate the magnitude/norm of a vector r'''
-    return np.sqrt(np.sum(r**2., axis))
+    return np.sqrt(np.sum(r**2.0, axis))
 
 def dist(i, j):
     '''Distance (magnitude) between particles i and j'''
     return norm(i - j)
 
+def create_random_vector():
+    '''Calculate a unitary vector in random direction'''
+    vec = np.random.uniform(-1.0, 1.0, (3))
+    return vec / norm(vec)
+
 # Simulation related
 def apply_boundary_conditions(x, L):
     '''apply boundary conditions for a box of size
     L x L x L to position x'''
-    for d in range(3):
-        if (x[d] < 0.0):
-            x[d] = L - x[d]
-        elif (x[d] > L):
-            x[d] = x[d] - L
-    return x
+    return x % L
 
 def get_force(state, t, particle, L):
     '''Determine the closest particle for a given particle at a given time (t) and
        return the distance between these two particles'''
-    reference = state[particle, t, :3]
+    xi = state[particle, t, :3]
     indices = np.arange(0, state.shape[0])
-    indices = np.delete(indices, particle)
-    neighhbours = state[indices, t, :3] # exclude the particle itself
-    r = np.zeros(3)
+    indices = np.delete(indices, particle) # exclude the particle itself
+    neighbours = state[indices, t, :3]
+    distances = np.zeros(len(neighbours))
+    F = np.zeros(3)
+    P = 0
     
     # find for each particle the closest mirror
-    for n in neighhbours:     
-        xi = reference
-        xj = n
-        closest_distance = (xi - xj + L/2) % L - L/2
-        
-        r += closest_distance
+#     for j, xj in enumerate(neighbours):
+#         r = (xi - xj + L / 2.0) % L - L / 2.0
+#         r_norm = norm(r)
+#         F += acceleration(r, r_norm)
+#         P += LJP(r_norm)
+#         distances[j] = r_norm
     
-    return r
-
-def create_random_vector():
-    '''Calculate a unitary vector in random direction'''
-    vec = np.asarray([np.random.uniform(), np.random.uniform(), np.random.uniform()])
-    return vec / norm(vec)
+    # find for each particle the closest mirror
+    r = (xi - neighbours + L / 2.0) % L - L / 2.0
+    r_norm = norm(r, axis=1)
+    r_norm_reshaped = np.reshape(np.repeat(r_norm, 3), (len(r_norm), 3))
+    F = np.sum(acceleration(r, r_norm_reshaped), axis=0)
+    P = np.sum(LJP(r_norm))
+    distances = r_norm
+    
+    return F, P, distances
 
 def rescale_velocities(state, t):
-    lambda_factor = np.sqrt((num_part - 1) * 3 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
+    lambda_factor = np.sqrt((num_part - 1) * 3.0 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
     state[:, t, 3:] *= lambda_factor
     return state
 
@@ -61,10 +64,10 @@ def dUdr(r):
     function of magnitude distance r'''
     return -48./(r**13.) + 24./(r**7.)
 
-def acceleration(r):
+def acceleration(r, r_norm):
     '''Force between particles a distance r apart
     r is magnitude (dimensionless)'''
-    nablaU = dUdr(norm(r)) * r/norm(r)
+    nablaU = dUdr(r_norm) * r / r_norm
     return -nablaU
 
 def current_velocity(x_next, x_prev, h):
@@ -89,11 +92,10 @@ def next_velocity(v, force, force_next, h):
     current force at time t
     next force at time t+h
     dimensionless units'''
-    v_next = v + h/2.*(force + force_next)
-    return v_next
+    return v + h/2.0 * (force + force_next)
 
 def KE(v):
-    '''Kinetive energy from velocity vector'''
+    '''Kinetic energy from velocity vector'''
     return 0.5 * v**2.
 
 def LJP(r):
@@ -105,20 +107,12 @@ def LJP(r):
 
 # Observables
 def pair_correlation(n, r, dr, L, N):
-    '''Pair correlation function for particle n
+    '''Pair correlation function for n particles
     at distance r (array), bin size dr,
-    in simulation box of size L,
-    and total number of particles N'''
-    V = L**3.
-    mean_n = np.mean(n)
-    g = (2*V)/(N*(N-1)) * mean_n/(4*np.pi * r**2. * dr)
+    in simulation box of size L and total number of particles N'''
+    V = L**3.0
+    g = (2.0*V)/(N*(N-1.0)) * n/(4.0 * np.pi * r**2.0 * dr)
     return g
 
-def create_random_vector():
-    '''Calculate a unitary vector in random direction'''
-    vec = np.asarray([np.random.uniform(), np.random.uniform(), np.random.uniform()])
-    return vec / norm(vec)
-
-def rescale_velocities(state, t, num_part, T):
-    lambda_factor = np.sqrt((num_part - 1) * 3 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
-    state[:, t, 3:] *= lambda_factor
+def get_lambda(state, t, num_part, T):
+    return np.sqrt((num_part - 1) * 3.0 * T / np.sum(norm(state[:, t, 3:], axis=1) ** 2.0))
