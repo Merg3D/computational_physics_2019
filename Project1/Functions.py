@@ -35,14 +35,6 @@ def get_force(state, t, particle, L):
     P = 0
     
     # find for each particle the closest mirror
-#     for j, xj in enumerate(neighbours):
-#         r = (xi - xj + L / 2.0) % L - L / 2.0
-#         r_norm = norm(r)
-#         F += acceleration(r, r_norm)
-#         P += LJP(r_norm)
-#         distances[j] = r_norm
-    
-    # find for each particle the closest mirror
     r = (xi - neighbours + L / 2.0) % L - L / 2.0
     r_norm = norm(r, axis=1)
     r_norm_reshaped = np.reshape(np.repeat(r_norm, 3), (len(r_norm), 3))
