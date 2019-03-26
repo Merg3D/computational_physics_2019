@@ -30,24 +30,14 @@ def get_force(state, t, particle, L):
     indices = np.arange(0, state.shape[0])
     indices = np.delete(indices, particle) # exclude the particle itself
     neighbours = state[indices, t, :3]
-    distances = np.zeros(len(neighbours))
-    F = np.zeros(3)
-    P = 0
     
-    # find for each particle the closest mirror
+    # find for each particle the closest mirror and calculate the force and potential
     r = (xi - neighbours + L / 2.0) % L - L / 2.0
     r_norm = norm(r, axis=1)
     r_norm_reshaped = np.reshape(np.repeat(r_norm, 3), (len(r_norm), 3))
     F = np.sum(acceleration(r, r_norm_reshaped), axis=0)
-    P = np.sum(LJP(r_norm))
-    distances = r_norm
-    
-    return F, P, distances
-
-def rescale_velocities(state, t):
-    lambda_factor = np.sqrt((num_part - 1) * 3.0 * T / np.sum(state[:, t, 3:] ** 2, axis=0))
-    state[:, t, 3:] *= lambda_factor
-    return state
+    P = np.sum(LJP(r_norm))    
+    return F, P, r_norm
 
 # Kinematics & mechanics
 def dUdr(r):
@@ -88,7 +78,7 @@ def next_velocity(v, force, force_next, h):
 
 def KE(v):
     '''Kinetic energy from velocity vector'''
-    return 0.5 * v**2.
+    return 0.5 * v**2.0
 
 def LJP(r):
     '''Lennard-Jones potential formula
@@ -99,9 +89,8 @@ def LJP(r):
 
 # Observables
 def pair_correlation(n, r, dr, L, N):
-    '''Pair correlation function for n particles
-    at distance r (array), bin size dr,
-    in simulation box of size L and total number of particles N'''
+    '''Pair correlation function for n particles in the range [r, r+dr]
+    bin size dr, in simulation box of size L and total number of particles N'''
     V = L**3.0
     g = (2.0*V)/(N*(N-1.0)) * n/(4.0 * np.pi * r**2.0 * dr)
     return g
