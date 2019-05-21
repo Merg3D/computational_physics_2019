@@ -5,3 +5,5 @@ for 100 time steps. One file indicates the dimension and galaxy, then records
 
 ./scrap/ has test files. Other files are necessary for running AMUSE, do not
 remove or move them from this directory.
+
+data_processing.py processes the .dat out_*_*.dat files to a movie. It needs the program ffmpeg, which can be installed by for example `apt install ffmpeg`.
