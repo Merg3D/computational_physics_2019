@@ -93,28 +93,6 @@ def simulate_merger(MW_galaxy, And_galaxy, nhalo_MW, nhalo_And,
         y_And.append(And_disk.y.value_in(units.kpc))
 
     hydro.stop()
-
-    # Create animated plot of merger
-##    FFMpegWriter = manimation.writers['ffmeg']
-##    metadata = dict(title = 'Galaxy Collision',
-##                    artist = 'Computational Physics',
-##                    comment = 'Computational Physcs')
-##    writer = FFMpegWriter(fps=30, metadata=metadata)
-##
-##    fig = plt.figure()
-##    l, = plt.plot([],[], 'k-o')
-##    nsteps = int(t_end/time_step)
-##
-##    with writer.savefig(fig, 'output.mp4', nsteps):
-##        for i in range(nsteps):
-##            plt.clf()
-##            plt.xlim()
-##            plt.ylim()
-##            plt.grid()
-##            plt.scatter(x_MW, y_MW, 'r', label='Milky Way')
-##            plt.scatter(x_And, y_And, 'b', label='Andromeda')
-##
-##            writer.grab_frame()
     return x_MW, y_MW, x_And, y_And
 
 if __name__ == '__main__':
