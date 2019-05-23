@@ -120,7 +120,7 @@ def new_option_parser():
     result.add_option("--n_halo", dest="n_halo", default = 2000,
                       help="number of stars in the halo [%default]")
     result.add_option("--t_end", unit=units.Myr,
-                      dest="t_end", default = 1400|units.Myr,
+                      dest="t_end", default = 2800|units.Myr,
                       help="End of the simulation [%default]")
     return result
 
