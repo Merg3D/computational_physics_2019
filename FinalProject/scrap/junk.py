@@ -33,11 +33,11 @@ def make_galaxies(M_galaxy, R_galaxy, n_halo, n_bulge, n_disk):
     galaxy2.velocity = galaxy1.velocity
     
     galaxy1.rotate(0., numpy.pi/2, numpy.pi/4)
-    galaxy1.position += [200.0, 200, 0] | units.kpc
+    galaxy1.position += [500.0, 500, 0] | units.kpc
     galaxy1.velocity += [-10.0, 0.0, -10.0] | units.km/units.s
 
     galaxy2.rotate(numpy.pi/4, numpy.pi/4, 0.0)
-    galaxy2.position -= [200.0, 0, 0] | units.kpc
+    galaxy2.position -= [500.0, 0, 0] | units.kpc
     galaxy2.velocity -= [0.0, 0.0, 0] | units.km/units.s
 
     return galaxy1, galaxy2, converter
@@ -58,8 +58,11 @@ def simulate_merger(galaxy1, galaxy2, converter, n_halo, t_end):
     y1 = []
     x2 = []
     y2 = []
+    KE = []
+    PE = []
+    TotE = []
     time = 0.0 | units.Myr
-    time_step = 5 | units.Myr
+    time_step = 10 | units.Myr
     while time < t_end:
         print(time)
         dynamics.evolve_model(time)
@@ -67,9 +70,29 @@ def simulate_merger(galaxy1, galaxy2, converter, n_halo, t_end):
         y1.append(disk1.y.value_in(units.kpc))
         x2.append(disk2.x.value_in(units.kpc))
         y2.append(disk2.y.value_in(units.kpc))
+
+##        kin = dynamics.kinetic_energy.value_in(units.J)
+##        KE.append(kin)
+##        pot = dynamics.potential_energy.value_in(units.J)
+##        PE.append(pot)
+##        TotE.append(kin + pot)
+        
         time += time_step
     make_plot(disk1, disk2, str(time)+'end.png')
     dynamics.stop()
+
+##    # Plot energies
+##    plt.plot(t, KE, label='Kinetic Energy')
+##    plt.plot(t, PE, label='Potential Energy')
+##    plt.plot(t, TotE, label='Total Energy')
+##    plt.plot((min(t), max(t)),(0,0), 'k--')
+##    plt.xlabel('Time (Myr)')
+##    plt.ylabel('Energy (J)')
+##    plt.title('Change In Energy of System')
+##    plt.legend()
+##    plt.savefig('energy_plot.png')
+##    plt.close()
+##    print('Energy plot complete')
 
     return x1, x2, y1, y2
     
@@ -90,7 +113,7 @@ def new_option_parser():
     result.add_option("--n_halo", dest="n_halo", default = 20000,
                       help="number of stars in the halo [%default]")
     result.add_option("--t_end", unit=units.Myr,
-                      dest="t_end", default = 500|units.Myr,
+                      dest="t_end", default = 700|units.Myr,
                       help="End of the simulation [%default]")
     return result
 
@@ -98,9 +121,13 @@ if __name__ == '__main__':
     o, arguments  = new_option_parser().parse_args()
     galaxy1, galaxy2, converter = make_galaxies(o.M_galaxy, o.R_galaxy,
                                                 o.n_halo, o.n_bulge, o.n_disk)
-    x1, x2, y1, y2 = simulate_merger(galaxy1, galaxy2, converter, o.n_halo,
-                                     o.t_end)
+    x1, x2, y1, y2 = simulate_merger(galaxy1, galaxy2,
+                                                      converter, o.n_halo, o.t_end)
     numpy.save('MW_x.dat', x1)
     numpy.save('MW_y.dat', y1)
     numpy.save('And_x.dat', x2)
     numpy.save('And_y.dat', y2)
+##    numpy.save('time', t)
+##    numpy.save('KE', KE)
+##    numpy.save('PE', PE)
+##    numpy.save('Total_Energy', TotE)

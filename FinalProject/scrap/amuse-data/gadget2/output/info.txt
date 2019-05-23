@@ -3,7 +3,7 @@ Begin Step 0, Time: 0, Systemstep: 0
 
 Begin Step 1, Time: 0.00610352, Systemstep: 0.00610352
 
-Begin Step 2, Time: 0.012207, Systemstep: 0.00160113
+Begin Step 2, Time: 0.012207, Systemstep: 0.00610352
 
 Begin Step 3, Time: 0.0183105, Systemstep: 0.00610352
 
@@ -11,13 +11,13 @@ Begin Step 4, Time: 0.0244141, Systemstep: 0.00320226
 
 Begin Step 5, Time: 0.0305176, Systemstep: 0.00610352
 
-Begin Step 6, Time: 0.0366211, Systemstep: 0.00480339
+Begin Step 6, Time: 0.0366211, Systemstep: 0.00610352
 
 Begin Step 7, Time: 0.0427246, Systemstep: 0.000301003
 
 Begin Step 8, Time: 0.0488281, Systemstep: 0.00610352
 
-Begin Step 9, Time: 0.0549316, Systemstep: 0.00190213
+Begin Step 9, Time: 0.0549316, Systemstep: 0.00610352
 
 Begin Step 10, Time: 0.0610352, Systemstep: 0.00610352
 
@@ -25,13 +25,13 @@ Begin Step 11, Time: 0.0671387, Systemstep: 0.00350326
 
 Begin Step 12, Time: 0.0732422, Systemstep: 0.00610352
 
-Begin Step 13, Time: 0.0793457, Systemstep: 0.00510439
+Begin Step 13, Time: 0.0793457, Systemstep: 0.00610352
 
 Begin Step 14, Time: 0.0854492, Systemstep: 0.000601634
 
 Begin Step 15, Time: 0.0915527, Systemstep: 0.00610352
 
-Begin Step 16, Time: 0.0976562, Systemstep: 0.00220276
+Begin Step 16, Time: 0.0976562, Systemstep: 0.00610352
 
 Begin Step 17, Time: 0.10376, Systemstep: 0.00610352
 
@@ -39,13 +39,13 @@ Begin Step 18, Time: 0.109863, Systemstep: 0.00380389
 
 Begin Step 19, Time: 0.115967, Systemstep: 0.00610352
 
-Begin Step 20, Time: 0.12207, Systemstep: 0.00540502
+Begin Step 20, Time: 0.12207, Systemstep: 0.00610352
 
 Begin Step 21, Time: 0.128174, Systemstep: 0.000902638
 
 Begin Step 22, Time: 0.134277, Systemstep: 0.00610352
 
-Begin Step 23, Time: 0.140381, Systemstep: 0.00250377
+Begin Step 23, Time: 0.140381, Systemstep: 0.00610352
 
 Begin Step 24, Time: 0.146484, Systemstep: 0.00610352
 
@@ -53,13 +53,13 @@ Begin Step 25, Time: 0.152588, Systemstep: 0.0041049
 
 Begin Step 26, Time: 0.158691, Systemstep: 0.00610352
 
-Begin Step 27, Time: 0.164795, Systemstep: 0.00570565
+Begin Step 27, Time: 0.164795, Systemstep: 0.00610352
 
 Begin Step 28, Time: 0.170898, Systemstep: 0.00120327
 
 Begin Step 29, Time: 0.177002, Systemstep: 0.00610352
 
-Begin Step 30, Time: 0.183105, Systemstep: 0.0028044
+Begin Step 30, Time: 0.183105, Systemstep: 0.00610352
 
 Begin Step 31, Time: 0.189209, Systemstep: 0.00610352
 
@@ -67,19 +67,19 @@ Begin Step 32, Time: 0.195312, Systemstep: 0.00440553
 
 Begin Step 33, Time: 0.201416, Systemstep: 0.00610352
 
-Begin Step 34, Time: 0.20752, Systemstep: 0.00600666
+Begin Step 34, Time: 0.20752, Systemstep: 0.00610352
 
 Begin Step 35, Time: 0.213623, Systemstep: 0.00150427
 
 Begin Step 36, Time: 0.219727, Systemstep: 0.00610352
 
-Begin Step 37, Time: 0.22583, Systemstep: 0.0031054
+Begin Step 37, Time: 0.22583, Systemstep: 0.00610352
 
 Begin Step 38, Time: 0.231934, Systemstep: 0.00610352
 
 Begin Step 39, Time: 0.238037, Systemstep: 0.00470616
 
-Begin Step 40, Time: 0.244141, Systemstep: 0.000203773
+Begin Step 40, Time: 0.244141, Systemstep: 0.00610352
 
 Begin Step 41, Time: 0.250244, Systemstep: 0.00610352
 
@@ -87,13 +87,13 @@ Begin Step 42, Time: 0.256348, Systemstep: 0.0018049
 
 Begin Step 43, Time: 0.262451, Systemstep: 0.00610352
 
-Begin Step 44, Time: 0.268555, Systemstep: 0.00340603
+Begin Step 44, Time: 0.268555, Systemstep: 0.00610352
 
 Begin Step 45, Time: 0.274658, Systemstep: 0.00610352
 
 Begin Step 46, Time: 0.280762, Systemstep: 0.00500716
 
-Begin Step 47, Time: 0.286865, Systemstep: 0.000504777
+Begin Step 47, Time: 0.286865, Systemstep: 0.00610352
 
 Begin Step 48, Time: 0.292969, Systemstep: 0.00610352
 
@@ -101,13 +101,13 @@ Begin Step 49, Time: 0.299072, Systemstep: 0.00210591
 
 Begin Step 50, Time: 0.305176, Systemstep: 0.00610352
 
-Begin Step 51, Time: 0.311279, Systemstep: 0.00370666
+Begin Step 51, Time: 0.311279, Systemstep: 0.00610352
 
 Begin Step 52, Time: 0.317383, Systemstep: 0.00610352
 
 Begin Step 53, Time: 0.323486, Systemstep: 0.00530779
 
-Begin Step 54, Time: 0.32959, Systemstep: 0.000805408
+Begin Step 54, Time: 0.32959, Systemstep: 0.00610352
 
 Begin Step 55, Time: 0.335693, Systemstep: 0.00610352
 
@@ -115,13 +115,13 @@ Begin Step 56, Time: 0.341797, Systemstep: 0.00240654
 
 Begin Step 57, Time: 0.3479, Systemstep: 0.00610352
 
-Begin Step 58, Time: 0.354004, Systemstep: 0.00400767
+Begin Step 58, Time: 0.354004, Systemstep: 0.00610352
 
 Begin Step 59, Time: 0.360107, Systemstep: 0.00610352
 
 Begin Step 60, Time: 0.366211, Systemstep: 0.0056088
 
-Begin Step 61, Time: 0.372314, Systemstep: 0.00110641
+Begin Step 61, Time: 0.372314, Systemstep: 0.00610352
 
 Begin Step 62, Time: 0.378418, Systemstep: 0.00610352
 
@@ -129,13 +129,13 @@ Begin Step 63, Time: 0.384521, Systemstep: 0.00270717
 
 Begin Step 64, Time: 0.390625, Systemstep: 0.00610352
 
-Begin Step 65, Time: 0.396729, Systemstep: 0.0043083
+Begin Step 65, Time: 0.396729, Systemstep: 0.00610352
 
 Begin Step 66, Time: 0.402832, Systemstep: 0.00610352
 
 Begin Step 67, Time: 0.408936, Systemstep: 0.00590943
 
-Begin Step 68, Time: 0.415039, Systemstep: 0.00140704
+Begin Step 68, Time: 0.415039, Systemstep: 0.00610352
 
 Begin Step 69, Time: 0.421143, Systemstep: 0.00610352
 
@@ -143,13 +143,13 @@ Begin Step 70, Time: 0.427246, Systemstep: 0.00300817
 
 Begin Step 71, Time: 0.43335, Systemstep: 0.00610352
 
-Begin Step 72, Time: 0.439453, Systemstep: 0.0046093
+Begin Step 72, Time: 0.439453, Systemstep: 0.00610352
 
 Begin Step 73, Time: 0.445557, Systemstep: 0.000106916
 
 Begin Step 74, Time: 0.45166, Systemstep: 0.00610352
 
-Begin Step 75, Time: 0.457764, Systemstep: 0.00170767
+Begin Step 75, Time: 0.457764, Systemstep: 0.00610352
 
 Begin Step 76, Time: 0.463867, Systemstep: 0.00610352
 
@@ -157,13 +157,13 @@ Begin Step 77, Time: 0.469971, Systemstep: 0.0033088
 
 Begin Step 78, Time: 0.476074, Systemstep: 0.00610352
 
-Begin Step 79, Time: 0.482178, Systemstep: 0.00490993
+Begin Step 79, Time: 0.482178, Systemstep: 0.00610352
 
 Begin Step 80, Time: 0.488281, Systemstep: 0.000407547
 
 Begin Step 81, Time: 0.494385, Systemstep: 0.00610352
 
-Begin Step 82, Time: 0.500488, Systemstep: 0.00200868
+Begin Step 82, Time: 0.500488, Systemstep: 0.00610352
 
 Begin Step 83, Time: 0.506592, Systemstep: 0.00610352
 
@@ -171,13 +171,13 @@ Begin Step 84, Time: 0.512695, Systemstep: 0.00360981
 
 Begin Step 85, Time: 0.518799, Systemstep: 0.00610352
 
-Begin Step 86, Time: 0.524902, Systemstep: 0.00521094
+Begin Step 86, Time: 0.524902, Systemstep: 0.00610352
 
 Begin Step 87, Time: 0.531006, Systemstep: 0.000708178
 
 Begin Step 88, Time: 0.537109, Systemstep: 0.00610352
 
-Begin Step 89, Time: 0.543213, Systemstep: 0.00230931
+Begin Step 89, Time: 0.543213, Systemstep: 0.00610352
 
 Begin Step 90, Time: 0.549316, Systemstep: 0.00610352
 
@@ -185,13 +185,13 @@ Begin Step 91, Time: 0.55542, Systemstep: 0.00391044
 
 Begin Step 92, Time: 0.561523, Systemstep: 0.00610352
 
-Begin Step 93, Time: 0.567627, Systemstep: 0.00551157
+Begin Step 93, Time: 0.567627, Systemstep: 0.00610352
 
 Begin Step 94, Time: 0.57373, Systemstep: 0.00100918
 
 Begin Step 95, Time: 0.579834, Systemstep: 0.00610352
 
-Begin Step 96, Time: 0.585938, Systemstep: 0.00261031
+Begin Step 96, Time: 0.585938, Systemstep: 0.00610352
 
 Begin Step 97, Time: 0.592041, Systemstep: 0.00610352
 
@@ -199,19 +199,19 @@ Begin Step 98, Time: 0.598145, Systemstep: 0.00421144
 
 Begin Step 99, Time: 0.604248, Systemstep: 0.00610352
 
-Begin Step 100, Time: 0.610352, Systemstep: 0.0058122
+Begin Step 100, Time: 0.610352, Systemstep: 0.00610352
 
 Begin Step 101, Time: 0.616455, Systemstep: 0.00130981
 
 Begin Step 102, Time: 0.622559, Systemstep: 0.00610352
 
-Begin Step 103, Time: 0.628662, Systemstep: 0.00291094
+Begin Step 103, Time: 0.628662, Systemstep: 0.00610352
 
 Begin Step 104, Time: 0.634766, Systemstep: 0.00610352
 
 Begin Step 105, Time: 0.640869, Systemstep: 0.00451207
 
-Begin Step 106, Time: 0.646973, Systemstep: 9.68575e-06
+Begin Step 106, Time: 0.646973, Systemstep: 0.00610352
 
 Begin Step 107, Time: 0.653076, Systemstep: 0.00610352
 
@@ -219,13 +219,13 @@ Begin Step 108, Time: 0.65918, Systemstep: 0.00161082
 
 Begin Step 109, Time: 0.665283, Systemstep: 0.00610352
 
-Begin Step 110, Time: 0.671387, Systemstep: 0.00321195
+Begin Step 110, Time: 0.671387, Systemstep: 0.00610352
 
 Begin Step 111, Time: 0.67749, Systemstep: 0.00610352
 
 Begin Step 112, Time: 0.683594, Systemstep: 0.0048127
 
-Begin Step 113, Time: 0.689697, Systemstep: 0.000310317
+Begin Step 113, Time: 0.689697, Systemstep: 0.00610352
 
 Begin Step 114, Time: 0.695801, Systemstep: 0.00610352
 
@@ -233,13 +233,13 @@ Begin Step 115, Time: 0.701904, Systemstep: 0.00191145
 
 Begin Step 116, Time: 0.708008, Systemstep: 0.00610352
 
-Begin Step 117, Time: 0.714111, Systemstep: 0.00351258
+Begin Step 117, Time: 0.714111, Systemstep: 0.00610352
 
 Begin Step 118, Time: 0.720215, Systemstep: 0.00610352
 
 Begin Step 119, Time: 0.726318, Systemstep: 0.00511371
 
-Begin Step 120, Time: 0.732422, Systemstep: 0.00061132
+Begin Step 120, Time: 0.732422, Systemstep: 0.00610352
 
 Begin Step 121, Time: 0.738525, Systemstep: 0.00610352
 
@@ -247,13 +247,13 @@ Begin Step 122, Time: 0.744629, Systemstep: 0.00221245
 
 Begin Step 123, Time: 0.750732, Systemstep: 0.00610352
 
-Begin Step 124, Time: 0.756836, Systemstep: 0.00381321
+Begin Step 124, Time: 0.756836, Systemstep: 0.00610352
 
 Begin Step 125, Time: 0.762939, Systemstep: 0.00610352
 
 Begin Step 126, Time: 0.769043, Systemstep: 0.00541434
 
-Begin Step 127, Time: 0.775146, Systemstep: 0.000911951
+Begin Step 127, Time: 0.775146, Systemstep: 0.00610352
 
 Begin Step 128, Time: 0.78125, Systemstep: 0.00610352
 
@@ -261,13 +261,13 @@ Begin Step 129, Time: 0.787354, Systemstep: 0.00251308
 
 Begin Step 130, Time: 0.793457, Systemstep: 0.00610352
 
-Begin Step 131, Time: 0.799561, Systemstep: 0.00411421
+Begin Step 131, Time: 0.799561, Systemstep: 0.00610352
 
 Begin Step 132, Time: 0.805664, Systemstep: 0.00610352
 
 Begin Step 133, Time: 0.811768, Systemstep: 0.00571534
 
-Begin Step 134, Time: 0.817871, Systemstep: 0.00121295
+Begin Step 134, Time: 0.817871, Systemstep: 0.00610352
 
 Begin Step 135, Time: 0.823975, Systemstep: 0.00610352
 
@@ -275,13 +275,13 @@ Begin Step 136, Time: 0.830078, Systemstep: 0.00281371
 
 Begin Step 137, Time: 0.836182, Systemstep: 0.00610352
 
-Begin Step 138, Time: 0.842285, Systemstep: 0.00441484
+Begin Step 138, Time: 0.842285, Systemstep: 0.00610352
 
 Begin Step 139, Time: 0.848389, Systemstep: 0.00610352
 
 Begin Step 140, Time: 0.854492, Systemstep: 0.00601597
 
-Begin Step 141, Time: 0.860596, Systemstep: 0.00151359
+Begin Step 141, Time: 0.860596, Systemstep: 0.00610352
 
 Begin Step 142, Time: 0.866699, Systemstep: 0.00610352
 
@@ -289,13 +289,13 @@ Begin Step 143, Time: 0.872803, Systemstep: 0.00311472
 
 Begin Step 144, Time: 0.878906, Systemstep: 0.00610352
 
-Begin Step 145, Time: 0.88501, Systemstep: 0.00471584
+Begin Step 145, Time: 0.88501, Systemstep: 0.00610352
 
 Begin Step 146, Time: 0.891113, Systemstep: 0.000213459
 
 Begin Step 147, Time: 0.897217, Systemstep: 0.00610352
 
-Begin Step 148, Time: 0.90332, Systemstep: 0.00181422
+Begin Step 148, Time: 0.90332, Systemstep: 0.00610352
 
 Begin Step 149, Time: 0.909424, Systemstep: 0.00610352
 
@@ -303,13 +303,13 @@ Begin Step 150, Time: 0.915527, Systemstep: 0.00341535
 
 Begin Step 151, Time: 0.921631, Systemstep: 0.00610352
 
-Begin Step 152, Time: 0.927734, Systemstep: 0.00501648
+Begin Step 152, Time: 0.927734, Systemstep: 0.00610352
 
 Begin Step 153, Time: 0.933838, Systemstep: 0.00051409
 
 Begin Step 154, Time: 0.939941, Systemstep: 0.00610352
 
-Begin Step 155, Time: 0.946045, Systemstep: 0.00211522
+Begin Step 155, Time: 0.946045, Systemstep: 0.00610352
 
 Begin Step 156, Time: 0.952148, Systemstep: 0.00610352
 
@@ -317,13 +317,13 @@ Begin Step 157, Time: 0.958252, Systemstep: 0.00371635
 
 Begin Step 158, Time: 0.964355, Systemstep: 0.00610352
 
-Begin Step 159, Time: 0.970459, Systemstep: 0.00531748
+Begin Step 159, Time: 0.970459, Systemstep: 0.00610352
 
 Begin Step 160, Time: 0.976562, Systemstep: 0.000814721
 
 Begin Step 161, Time: 0.982666, Systemstep: 0.00610352
 
-Begin Step 162, Time: 0.98877, Systemstep: 0.00241585
+Begin Step 162, Time: 0.98877, Systemstep: 0.00610352
 
 Begin Step 163, Time: 0.994873, Systemstep: 0.00610352
 
@@ -331,16 +331,150 @@ Begin Step 164, Time: 1.00098, Systemstep: 0.00401698
 
 Begin Step 165, Time: 1.00708, Systemstep: 0.00610352
 
-Begin Step 166, Time: 1.01318, Systemstep: 0.00561811
+Begin Step 166, Time: 1.01318, Systemstep: 0.00610352
 
 Begin Step 167, Time: 1.01929, Systemstep: 0.00111572
 
 Begin Step 168, Time: 1.02539, Systemstep: 0.00610352
 
-Begin Step 169, Time: 1.03149, Systemstep: 0.00271685
+Begin Step 169, Time: 1.03149, Systemstep: 0.00610352
 
 Begin Step 170, Time: 1.0376, Systemstep: 0.00610352
 
 Begin Step 171, Time: 1.0437, Systemstep: 0.00431798
 
 Begin Step 172, Time: 1.0498, Systemstep: 0.00610352
+
+Begin Step 173, Time: 1.05591, Systemstep: 0.00610352
+
+Begin Step 174, Time: 1.06201, Systemstep: 0.00141636
+
+Begin Step 175, Time: 1.06812, Systemstep: 0.00610352
+
+Begin Step 176, Time: 1.07422, Systemstep: 0.00610352
+
+Begin Step 177, Time: 1.08032, Systemstep: 0.00610352
+
+Begin Step 178, Time: 1.08643, Systemstep: 0.00461861
+
+Begin Step 179, Time: 1.09253, Systemstep: 0.00610352
+
+Begin Step 180, Time: 1.09863, Systemstep: 0.00610352
+
+Begin Step 181, Time: 1.10474, Systemstep: 0.00171736
+
+Begin Step 182, Time: 1.11084, Systemstep: 0.00610352
+
+Begin Step 183, Time: 1.11694, Systemstep: 0.00610352
+
+Begin Step 184, Time: 1.12305, Systemstep: 0.00610352
+
+Begin Step 185, Time: 1.12915, Systemstep: 0.00491962
+
+Begin Step 186, Time: 1.13525, Systemstep: 0.00610352
+
+Begin Step 187, Time: 1.14136, Systemstep: 0.00610352
+
+Begin Step 188, Time: 1.14746, Systemstep: 0.00201799
+
+Begin Step 189, Time: 1.15356, Systemstep: 0.00610352
+
+Begin Step 190, Time: 1.15967, Systemstep: 0.00610352
+
+Begin Step 191, Time: 1.16577, Systemstep: 0.00610352
+
+Begin Step 192, Time: 1.17188, Systemstep: 0.00522025
+
+Begin Step 193, Time: 1.17798, Systemstep: 0.00610352
+
+Begin Step 194, Time: 1.18408, Systemstep: 0.00610352
+
+Begin Step 195, Time: 1.19019, Systemstep: 0.00231899
+
+Begin Step 196, Time: 1.19629, Systemstep: 0.00610352
+
+Begin Step 197, Time: 1.20239, Systemstep: 0.00610352
+
+Begin Step 198, Time: 1.2085, Systemstep: 0.00610352
+
+Begin Step 199, Time: 1.2146, Systemstep: 0.00552088
+
+Begin Step 200, Time: 1.2207, Systemstep: 0.00610352
+
+Begin Step 201, Time: 1.22681, Systemstep: 0.00610352
+
+Begin Step 202, Time: 1.23291, Systemstep: 0.00261962
+
+Begin Step 203, Time: 1.23901, Systemstep: 0.00610352
+
+Begin Step 204, Time: 1.24512, Systemstep: 0.00610352
+
+Begin Step 205, Time: 1.25122, Systemstep: 0.00610352
+
+Begin Step 206, Time: 1.25732, Systemstep: 0.00582188
+
+Begin Step 207, Time: 1.26343, Systemstep: 0.00610352
+
+Begin Step 208, Time: 1.26953, Systemstep: 0.00610352
+
+Begin Step 209, Time: 1.27563, Systemstep: 0.00292063
+
+Begin Step 210, Time: 1.28174, Systemstep: 0.00610352
+
+Begin Step 211, Time: 1.28784, Systemstep: 0.00610352
+
+Begin Step 212, Time: 1.29395, Systemstep: 1.8999e-05
+
+Begin Step 213, Time: 1.30005, Systemstep: 0.00610352
+
+Begin Step 214, Time: 1.30615, Systemstep: 0.00610352
+
+Begin Step 215, Time: 1.31226, Systemstep: 0.00610352
+
+Begin Step 216, Time: 1.31836, Systemstep: 0.00322126
+
+Begin Step 217, Time: 1.32446, Systemstep: 0.00610352
+
+Begin Step 218, Time: 1.33057, Systemstep: 0.00610352
+
+Begin Step 219, Time: 1.33667, Systemstep: 0.000320002
+
+Begin Step 220, Time: 1.34277, Systemstep: 0.00610352
+
+Begin Step 221, Time: 1.34888, Systemstep: 0.00610352
+
+Begin Step 222, Time: 1.35498, Systemstep: 0.00610352
+
+Begin Step 223, Time: 1.36108, Systemstep: 0.00352189
+
+Begin Step 224, Time: 1.36719, Systemstep: 0.00610352
+
+Begin Step 225, Time: 1.37329, Systemstep: 0.00610352
+
+Begin Step 226, Time: 1.37939, Systemstep: 0.000620633
+
+Begin Step 227, Time: 1.3855, Systemstep: 0.00610352
+
+Begin Step 228, Time: 1.3916, Systemstep: 0.00610352
+
+Begin Step 229, Time: 1.39771, Systemstep: 0.00610352
+
+Begin Step 230, Time: 1.40381, Systemstep: 0.00382289
+
+Begin Step 231, Time: 1.40991, Systemstep: 0.00610352
+
+Begin Step 232, Time: 1.41602, Systemstep: 0.00610352
+
+Begin Step 233, Time: 1.42212, Systemstep: 0.000921637
+
+Begin Step 234, Time: 1.42822, Systemstep: 0.00610352
+
+Begin Step 235, Time: 1.43433, Systemstep: 0.00610352
+
+Begin Step 236, Time: 1.44043, Systemstep: 0.00610352
+
+Begin Step 237, Time: 1.44653, Systemstep: 0.00412352
+
+Begin Step 238, Time: 1.45264, Systemstep: 0.00610352
+
+Begin Step 239, Time: 1.45874, Systemstep: 0.00610352
