@@ -28,16 +28,16 @@ def make_galaxies(M_galaxy, R_galaxy, n_halo, n_bulge, n_disk):
                                   bulge_number_of_particles=n_bulge,
                                   disk_number_of_particles=n_disk)
     galaxy2 = Particles(len(galaxy1))
-    galaxy2.mass = galaxy1.mass
+    galaxy2.mass = galaxy1.mass.value_in(units.MSun) + 0.5 | units.MSun
     galaxy2.position = galaxy1.position
     galaxy2.velocity = galaxy1.velocity
     
     galaxy1.rotate(0., numpy.pi/2, numpy.pi/4)
-    galaxy1.position += [100.0, 100, 0] | units.kpc
+    galaxy1.position += [200.0, 200, 0] | units.kpc
     galaxy1.velocity += [-10.0, 0.0, -10.0] | units.km/units.s
 
     galaxy2.rotate(numpy.pi/4, numpy.pi/4, 0.0)
-    galaxy2.position -= [100.0, 0, 0] | units.kpc
+    galaxy2.position -= [200.0, 0, 0] | units.kpc
     galaxy2.velocity -= [0.0, 0.0, 0] | units.km/units.s
 
     return galaxy1, galaxy2, converter
@@ -59,7 +59,7 @@ def simulate_merger(galaxy1, galaxy2, converter, n_halo, t_end):
     x2 = []
     y2 = []
     time = 0.0 | units.Myr
-    time_step = 10 | units.Myr
+    time_step = 5 | units.Myr
     while time < t_end:
         print(time)
         dynamics.evolve_model(time)
@@ -90,7 +90,7 @@ def new_option_parser():
     result.add_option("--n_halo", dest="n_halo", default = 20000,
                       help="number of stars in the halo [%default]")
     result.add_option("--t_end", unit=units.Myr,
-                      dest="t_end", default = 200|units.Myr,
+                      dest="t_end", default = 500|units.Myr,
                       help="End of the simulation [%default]")
     return result
 
