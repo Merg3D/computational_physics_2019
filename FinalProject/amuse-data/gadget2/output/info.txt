@@ -1,8 +1,18 @@
 
 Begin Step 0, Time: 0, Systemstep: 0
 
-Begin Step 1, Time: 0.00610352, Systemstep: 0.000164285
+Begin Step 1, Time: 0.00610352, Systemstep: 0.00610352
 
-Begin Step 2, Time: 0.012207, Systemstep: 0.000116602
+Begin Step 2, Time: 0.012207, Systemstep: 0.00610352
 
-Begin Step 3, Time: 0.0183105, Systemstep: 6.85453e-05
+Begin Step 3, Time: 0.0183105, Systemstep: 0.00610352
+
+Begin Step 4, Time: 0.0244141, Systemstep: 0.00610352
+
+Begin Step 5, Time: 0.0305176, Systemstep: 0.00610352
+
+Begin Step 6, Time: 0.0366211, Systemstep: 0.00610352
+
+Begin Step 7, Time: 0.0427246, Systemstep: 0.00610352
+
+Begin Step 8, Time: 0.0488281, Systemstep: 0.00610352

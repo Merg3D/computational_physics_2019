@@ -52,12 +52,27 @@ def simulate_merger(galaxy1, galaxy2, converter, n_halo, t_end):
     disk1 = set1[:n_halo]
     disk2 = set2[:n_halo]
 
-    make_plot(disk1, disk2, "Galaxy_merger_t0Myr")
-    dynamics.evolve_model(t_end)
-    make_plot(disk1, disk2,
-              "Galaxy_merger_t"+str(t_end.value_in(units.Myr))+"Myr")
-
+    make_plot(disk1, disk2, 'start.png')
+##    dynamics.evolve_model(t_end)
+    x1 = []
+    y1 = []
+    x2 = []
+    y2 = []
+    time = 0.0 | units.Myr
+    time_step = 10 | units.Myr
+    while time < t_end:
+        print(time)
+        dynamics.evolve_model(time)
+        x1.append(disk1.x.value_in(units.kpc))
+        y1.append(disk1.y.value_in(units.kpc))
+        x2.append(disk2.x.value_in(units.kpc))
+        y2.append(disk2.y.value_in(units.kpc))
+        time += time_step
+    make_plot(disk1, disk2, str(time)+'end.png')
     dynamics.stop()
+
+    return x1, x2, y1, y2
+    
 
 def new_option_parser():
     from amuse.units.optparse import OptionParser
@@ -83,4 +98,9 @@ if __name__ == '__main__':
     o, arguments  = new_option_parser().parse_args()
     galaxy1, galaxy2, converter = make_galaxies(o.M_galaxy, o.R_galaxy,
                                                 o.n_halo, o.n_bulge, o.n_disk)
-    simulate_merger(galaxy1, galaxy2, converter, o.n_halo, o.t_end)
+    x1, x2, y1, y2 = simulate_merger(galaxy1, galaxy2, converter, o.n_halo,
+                                     o.t_end)
+    numpy.save('MW_x.dat', x1)
+    numpy.save('MW_y.dat', y1)
+    numpy.save('And_x.dat', x2)
+    numpy.save('And_y.dat', y2)

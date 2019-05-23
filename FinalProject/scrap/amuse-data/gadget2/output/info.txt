@@ -1,0 +1,134 @@
+
+Begin Step 0, Time: 0, Systemstep: 0
+
+Begin Step 1, Time: 0.00610352, Systemstep: 0.00610352
+
+Begin Step 2, Time: 0.012207, Systemstep: 0.00610352
+
+Begin Step 3, Time: 0.0183105, Systemstep: 0.00610352
+
+Begin Step 4, Time: 0.0244141, Systemstep: 0.00320226
+
+Begin Step 5, Time: 0.0305176, Systemstep: 0.00610352
+
+Begin Step 6, Time: 0.0366211, Systemstep: 0.00610352
+
+Begin Step 7, Time: 0.0427246, Systemstep: 0.000301003
+
+Begin Step 8, Time: 0.0488281, Systemstep: 0.00610352
+
+Begin Step 9, Time: 0.0549316, Systemstep: 0.00610352
+
+Begin Step 10, Time: 0.0610352, Systemstep: 0.00610352
+
+Begin Step 11, Time: 0.0671387, Systemstep: 0.00350326
+
+Begin Step 12, Time: 0.0732422, Systemstep: 0.00610352
+
+Begin Step 13, Time: 0.0793457, Systemstep: 0.00610352
+
+Begin Step 14, Time: 0.0854492, Systemstep: 0.000601634
+
+Begin Step 15, Time: 0.0915527, Systemstep: 0.00610352
+
+Begin Step 16, Time: 0.0976562, Systemstep: 0.00610352
+
+Begin Step 17, Time: 0.10376, Systemstep: 0.00610352
+
+Begin Step 18, Time: 0.109863, Systemstep: 0.00380389
+
+Begin Step 19, Time: 0.115967, Systemstep: 0.00610352
+
+Begin Step 20, Time: 0.12207, Systemstep: 0.00610352
+
+Begin Step 21, Time: 0.128174, Systemstep: 0.000902638
+
+Begin Step 22, Time: 0.134277, Systemstep: 0.00610352
+
+Begin Step 23, Time: 0.140381, Systemstep: 0.00610352
+
+Begin Step 24, Time: 0.146484, Systemstep: 0.00610352
+
+Begin Step 25, Time: 0.152588, Systemstep: 0.0041049
+
+Begin Step 26, Time: 0.158691, Systemstep: 0.00610352
+
+Begin Step 27, Time: 0.164795, Systemstep: 0.00610352
+
+Begin Step 28, Time: 0.170898, Systemstep: 0.00120327
+
+Begin Step 29, Time: 0.177002, Systemstep: 0.00610352
+
+Begin Step 30, Time: 0.183105, Systemstep: 0.00610352
+
+Begin Step 31, Time: 0.189209, Systemstep: 0.00610352
+
+Begin Step 32, Time: 0.195312, Systemstep: 0.00440553
+
+Begin Step 33, Time: 0.201416, Systemstep: 0.00610352
+
+Begin Step 34, Time: 0.20752, Systemstep: 0.00610352
+
+Begin Step 35, Time: 0.213623, Systemstep: 0.00150427
+
+Begin Step 36, Time: 0.219727, Systemstep: 0.00610352
+
+Begin Step 37, Time: 0.22583, Systemstep: 0.00610352
+
+Begin Step 38, Time: 0.231934, Systemstep: 0.00610352
+
+Begin Step 39, Time: 0.238037, Systemstep: 0.00470616
+
+Begin Step 40, Time: 0.244141, Systemstep: 0.00610352
+
+Begin Step 41, Time: 0.250244, Systemstep: 0.00610352
+
+Begin Step 42, Time: 0.256348, Systemstep: 0.0018049
+
+Begin Step 43, Time: 0.262451, Systemstep: 0.00610352
+
+Begin Step 44, Time: 0.268555, Systemstep: 0.00610352
+
+Begin Step 45, Time: 0.274658, Systemstep: 0.00610352
+
+Begin Step 46, Time: 0.280762, Systemstep: 0.00500716
+
+Begin Step 47, Time: 0.286865, Systemstep: 0.00610352
+
+Begin Step 48, Time: 0.292969, Systemstep: 0.00610352
+
+Begin Step 49, Time: 0.299072, Systemstep: 0.00210591
+
+Begin Step 50, Time: 0.305176, Systemstep: 0.00610352
+
+Begin Step 51, Time: 0.311279, Systemstep: 0.00610352
+
+Begin Step 52, Time: 0.317383, Systemstep: 0.00610352
+
+Begin Step 53, Time: 0.323486, Systemstep: 0.00530779
+
+Begin Step 54, Time: 0.32959, Systemstep: 0.00610352
+
+Begin Step 55, Time: 0.335693, Systemstep: 0.00610352
+
+Begin Step 56, Time: 0.341797, Systemstep: 0.00240654
+
+Begin Step 57, Time: 0.3479, Systemstep: 0.00610352
+
+Begin Step 58, Time: 0.354004, Systemstep: 0.00610352
+
+Begin Step 59, Time: 0.360107, Systemstep: 0.00610352
+
+Begin Step 60, Time: 0.366211, Systemstep: 0.0056088
+
+Begin Step 61, Time: 0.372314, Systemstep: 0.00610352
+
+Begin Step 62, Time: 0.378418, Systemstep: 0.00610352
+
+Begin Step 63, Time: 0.384521, Systemstep: 0.00270717
+
+Begin Step 64, Time: 0.390625, Systemstep: 0.00610352
+
+Begin Step 65, Time: 0.396729, Systemstep: 0.00610352
+
+Begin Step 66, Time: 0.402832, Systemstep: 0.00610352

@@ -13,6 +13,8 @@ from amuse.lab import nbody_system
 from amuse.ext.galactics_model import new_galactics_model
 from amuse.community.gadget2.interface import Gadget2
 from amuse.units.generic_unit_converter import ConvertBetweenGenericAndSiUnits
+from amuse.datamodel import Particles
+
 
 def make_plot(disk1, disk2, state):
     '''
@@ -50,20 +52,21 @@ def create_two_galaxies(M_MW, M_And, R_MW, R_And,
                                    bulge_number_of_particles = n_bulge,
                                    disk_number_of_particles = n_disk)
     And_galaxy = new_galactics_model(n_halo, converter,
-                                     bulge_number_of_particles = n_bulge,
-                                     disk_number_of_particles = n_disk)
+                                   bulge_number_of_particles = n_bulge,
+                                   disk_number_of_particles = n_disk)
+    
     # Include other parameters
     MW_galaxy.mass = M_MW
-    And_galaxy.mass = M_And
-    # Offset
-    MW_galaxy.move_to_center()
-    And_galaxy.position = MW_galaxy.position.value_in(units.kpc) \
-                          - [700.0, 500.0, 0.0] | units.kpc
-    
+    MW_galaxy.radius = R_MW
+    MW_galaxy.velocity += [-10., -10., 0] | units.km/units.s
     MW_galaxy.rotate(0., np.pi/2, np.pi/4)
-    MW_galaxy.velocity += [-20.0, -20.0, 0.0] | units.km/units.s
-    And_galaxy.rotate(np.pi/4, np.pi/4, 0.0)
-    And_galaxy.velocity += [0.0, 0.0, 0.0] | units.km/units.s
+    
+    And_galaxy.mass = M_And
+    And_galaxy.radius = R_And
+    And_galaxy.position = MW_galaxy.position.value_in(units.kpc) \
+                          + [-700., -600., 0] | units.kpc
+    And_galaxy.velocity += [0., 0., 0.] | units.km/units.s
+    And_galaxy.rotate(np.pi/4., np.pi/4., 0.)
 
     return MW_galaxy, And_galaxy
 
@@ -125,7 +128,8 @@ def simulate_merger(MW_galaxy, And_galaxy, n_halo,
         TotE.append(kin + pot)
         
         time += time_step
-
+        
+    make_plot(MW_disk, And_disk, 'end')
     hydro.stop()
     print('Simulation complete')
 
@@ -166,10 +170,10 @@ def new_option_parser():
     result.add_option("--n_halo", dest="n_halo", default = 20000,
                       help="number of stars in the halo [%default]")
     result.add_option("--t_end", unit=units.Myr,
-                      dest="t_end", default = 10|units.Myr,
+                      dest="t_end", default = 50|units.Myr,
                       help="End of the simulation [%default]")
     result.add_option("--t_step", unit=units.Myr,
-                      dest="time_step", default = 0.1|units.Myr,
+                      dest="time_step", default = 25|units.Myr,
                       help="Time step for simulation [%default]")
     return result    
 
