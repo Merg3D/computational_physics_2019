@@ -10,10 +10,10 @@ from amuse.ext.galactics_model import new_galactics_model
 def make_plot(disk1, disk2, filename):
     x_label = "X [kpc]"
     y_label = "Y [kpc]"
-    plt.xlim(min(disk2.x.value_in(units.kpc)),
-                    max(disk1.x.value_in(units.kpc)))
-    plt.ylim(min(disk2.y.value_in(units.kpc)),
-                    max(disk1.y.value_in(units.kpc)))
+##    plt.xlim(min(disk2.x.value_in(units.kpc)),
+##                    max(disk1.x.value_in(units.kpc)))
+##    plt.ylim(min(disk2.y.value_in(units.kpc)),
+##                    max(disk1.y.value_in(units.kpc)))
 
     plt.scatter(disk1.x.value_in(units.kpc), disk1.y.value_in(units.kpc),
                     alpha=1, s=1, lw=0)
@@ -60,48 +60,48 @@ def simulate_merger(galaxy1, galaxy2, converter, n_halo, t_end):
     y1 = []
     x2 = []
     y2 = []
-    KE = []
-    PE = []
-    TotE = []
-    t = []
+##    KE = []
+##    PE = []
+##    TotE = []
+##    t = []
     time = 0.0 | units.Myr
     time_step = 20 | units.Myr
     while time < t_end:
         print(time)
-        t.append(time.value_in(units.Myr))
+##        t.append(time.value_in(units.Myr))
         dynamics.evolve_model(time)
         x1.append(disk1.x.value_in(units.kpc))
         y1.append(disk1.y.value_in(units.kpc))
         x2.append(disk2.x.value_in(units.kpc))
         y2.append(disk2.y.value_in(units.kpc))
-        print('positions set')
-        kin = dynamics.kinetic_energy.value_in(units.J)
-        KE.append(kin)
-        print('ke set')
-        pot = dynamics.potential_energy.value_in(units.J)
-        PE.append(pot)
-        print('pe set')
-        TotE.append(kin + pot)
-        print('tot e set')
+##        print('positions set')
+##        kin = dynamics.kinetic_energy.value_in(units.J)
+##        KE.append(kin)
+##        print('ke set')
+##        pot = dynamics.potential_energy.value_in(units.J)
+##        PE.append(pot)
+##        print('pe set')
+##        TotE.append(kin + pot)
+##        print('tot e set')
         
         time += time_step
     make_plot(disk1, disk2, str(time)+'end.png')
     dynamics.stop()
 
-    # Plot energies
-    plt.plot(t, KE, label='Kinetic Energy')
-    plt.plot(t, PE, label='Potential Energy')
-    plt.plot(t, TotE, label='Total Energy')
-    plt.plot((min(t), max(t)),(0,0), 'k--')
-    plt.xlabel('Time (Myr)')
-    plt.ylabel('Energy (J)')
-    plt.title('Change In Energy of System')
-    plt.legend()
-    plt.savefig('energy_plot.png')
-    plt.close()
-    print('Energy plot complete')
+##    # Plot energies
+##    plt.plot(t, KE, label='Kinetic Energy')
+##    plt.plot(t, PE, label='Potential Energy')
+##    plt.plot(t, TotE, label='Total Energy')
+##    plt.plot((min(t), max(t)),(0,0), 'k--')
+##    plt.xlabel('Time (Myr)')
+##    plt.ylabel('Energy (J)')
+##    plt.title('Change In Energy of System')
+##    plt.legend()
+##    plt.savefig('energy_plot.png')
+##    plt.close()
+##    print('Energy plot complete')
 
-    return x1, x2, y1, y2, KE, PE, TotE, t
+    return x1, x2, y1, y2#, KE, PE, TotE, t
     
 
 def new_option_parser():
@@ -113,11 +113,11 @@ def new_option_parser():
     result.add_option("-R", unit=units.kpc,
                       dest="R_galaxy", default = 10 | units.kpc,
                       help="Galaxy size [%default]")
-    result.add_option("--n_bulge", dest="n_bulge", default = 10,
+    result.add_option("--n_bulge", dest="n_bulge", default = 1000,
                       help="number of stars in the bulge [%default]")
-    result.add_option("--n_disk", dest="n_disk", default = 10,
+    result.add_option("--n_disk", dest="n_disk", default = 1000,
                       help="number of stars in the disk [%default]")
-    result.add_option("--n_halo", dest="n_halo", default = 20,
+    result.add_option("--n_halo", dest="n_halo", default = 2000,
                       help="number of stars in the halo [%default]")
     result.add_option("--t_end", unit=units.Myr,
                       dest="t_end", default = 1400|units.Myr,
@@ -128,14 +128,13 @@ if __name__ == '__main__':
     o, arguments  = new_option_parser().parse_args()
     galaxy1, galaxy2, converter = make_galaxies(o.M_galaxy, o.R_galaxy,
                                                 o.n_halo, o.n_bulge, o.n_disk)
-    x1, x2, y1, y2, KE, PE, TotE, t = simulate_merger(galaxy1, galaxy2,
-                                                      converter, o.n_halo,
-                                                      o.t_end)
+    x1, x2, y1, y2 = simulate_merger(galaxy1, galaxy2, converter, o.n_halo,
+                                     o.t_end)
     numpy.save('MW_x.dat', x1)
     numpy.save('MW_y.dat', y1)
     numpy.save('And_x.dat', x2)
     numpy.save('And_y.dat', y2)
-    numpy.save('time', t)
-    numpy.save('KE', KE)
-    numpy.save('PE', PE)
-    numpy.save('Total_Energy', TotE)
+##    numpy.save('time', t)
+##    numpy.save('KE', KE)
+##    numpy.save('PE', PE)
+##    numpy.save('Total_Energy', TotE)
